@@ -2205,14 +2205,14 @@ PHP_FUNCTION(fann_create_train_from_callback)
 		if (PHPC_TYPE_P(pv_input) != IS_ARRAY ||
 				PHPC_HASH_NUM_ELEMENTS(PHPC_ARRVAL_P(pv_input)) != num_input) {
 			php_error_docref(NULL TSRMLS_CC, E_WARNING,
-					"Returned input must be an array with %ld elements", num_input);
+					"Returned input must be an array with %lld elements", num_input);
 			zval_ptr_dtor(&retval);
 			RETURN_FALSE;
 		}
 		if (PHPC_TYPE_P(pv_output) != IS_ARRAY ||
 				PHPC_HASH_NUM_ELEMENTS(PHPC_ARRVAL_P(pv_output)) != num_output) {
 			php_error_docref(NULL TSRMLS_CC, E_WARNING,
-					"Returned output must be an array with %ld elements", num_output);
+					"Returned output must be an array with %lld elements", num_output);
 			zval_ptr_dtor(&retval);
 			RETURN_FALSE;
 		}
